@@ -1,22 +1,12 @@
-# Quasar App (hrm-project)
+# Joyo App
 
-A Quasar Framework app
-
-## Install the dependencies
-```bash
-npm install
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+An app developed using Vue.js (Quasar Framework).
 
 
-### Build the app for production
-```bash
-quasar build
-```
+## Overview
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+This application is used to manage the project which is in development via  collaborative teamwork. There are some functions which can be performed on this application which are restricted to "user's type".
+A user can be Admin, Project manager, Project lead, Team member, Intern.
+
+
+

@@ -1,13 +1,13 @@
 <template>
-  <div class="q-pa-md" style="full-width">
-      <q-separator />
+  <div class="q-pa-md" >
+    
       <div class="text-h2 text-center">
          {{ userDetails.name }}
          <q-badge>{{ userDetails.type }}</q-badge>
       </div>
       
       
-      <q-card>
+      <q-card class="full-width">
         <q-tabs
           v-model="tab"
           class="q-mb-md"
@@ -63,3 +63,12 @@ export default {
 
 }
 </script>
+<style lang="stylus" scoped>
+.full-width {
+    width: 60% !important;
+    margin-left: 290px !important /* rtl:ignore */;
+    margin-right: 250px !important /* rtl:ignore */;
+    margin-top: 50px !important /* rtl:ignore */;
+    margin-bottom 400px !important /* rtl:ignore */;
+}
+</style>

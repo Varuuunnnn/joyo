@@ -48,8 +48,9 @@ export default {
 <style lang="stylus" scoped>
 .full-width {
     width: 60% !important;
-    margin-left: 250px !important /* rtl:ignore */;
+    margin-left: 290px !important /* rtl:ignore */;
     margin-right: 250px !important /* rtl:ignore */;
+    margin-top: 100px !important /* rtl:ignore */;
     margin-bottom 400px !important /* rtl:ignore */;
 }
 </style>

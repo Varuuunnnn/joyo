@@ -26,12 +26,12 @@
         <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="add-project" v-if="userDetails.type=='admin'">
             <add-project :tab="tab" />
-            Here you can add project,members ( if you're admin only ) 
+            
           </q-tab-panel>
 
           <q-tab-panel name="project-list">
             <project-list :tab="tab" />
-            Here you can see list of projects
+           
           </q-tab-panel>
 
           

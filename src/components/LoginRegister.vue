@@ -29,12 +29,13 @@
          color="primary"
          inline
       />
-      <div class="row">
+      <div style="width:80px; margin:0 auto;">
           <q-space />
           <q-btn
              color="primary"
              :label="tab" 
              type="submit"
+             display="block"
            />
       </div>
     </q-form>    

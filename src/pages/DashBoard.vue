@@ -1,5 +1,5 @@
 <template>
-  <div class="q-gutter-y-md" style="full-width">
+  <div class="q-gutter-x-lg" style="full-width">
       <q-separator />
       <div class="text-h2 text-center">
          {{ userDetails.name }}

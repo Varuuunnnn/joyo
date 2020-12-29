@@ -28,7 +28,7 @@
          inline
       />
      
-      <div style="width:180px; margin:0 auto;">
+      <div style="width:130px; margin:0 auto;">
           <q-space />
           <q-btn
              color="primary"

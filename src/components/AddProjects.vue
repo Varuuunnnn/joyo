@@ -12,7 +12,7 @@
          class="q-mb-md"
          v-model="projectData.description"
          label="Project description"
-         type="text"
+         type="textarea"
       />
       <q-input
          outlined
@@ -28,11 +28,11 @@
          inline
       />
      
-      <div class="row">
+      <div style="width:130px; margin:0 auto;">
           <q-space />
           <q-btn
              color="primary"
-             :label="tab" 
+             label="add project" 
              type="submit"
            />
       </div>

@@ -45,3 +45,12 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+.full-width {
+    width: 60% !important;
+    margin-left: 290px !important /* rtl:ignore */;
+    margin-right: 250px !important /* rtl:ignore */;
+    margin-top: 50px !important /* rtl:ignore */;
+    margin-bottom 400px !important /* rtl:ignore */;
+}
+</style>

@@ -1,8 +1,8 @@
 {
-  "name": "hrm-project",
+  "name": "Joyo",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "description": "An Application for collaborative management of project",
+  "productName": "Joyo App",
   "author": "'Varun <'varungurjar@cilalabs.com'>",
   "private": true,
   "scripts": {

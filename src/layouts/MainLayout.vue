@@ -35,7 +35,7 @@ export default {
     ...mapState('store',['userDetails']),
     title(){
       let currentPath= this.$route.fullPath
-      if(currentPath=='/') return 'Homepage'
+      if(currentPath=='/') return 'JOYO'
       else if(currentPath=="/dashboard") return 'Dashboard'
     }
   },

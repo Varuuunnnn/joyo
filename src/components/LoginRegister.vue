@@ -14,6 +14,7 @@
          v-model="formData.email"
          label="Email"
          type="email"
+         :rules="[val => !!val || 'Email is missing', isValidEmail]"
       />
       <q-input
          outlined
@@ -29,12 +30,13 @@
          color="primary"
          inline
       />
-      <div class="row">
+      <div style="width:80px; margin:0 auto;">
           <q-space />
           <q-btn
              color="primary"
              :label="tab" 
              type="submit"
+             display="block"
            />
       </div>
     </q-form>    
@@ -50,6 +52,7 @@ export default {
                 email:'',
                 password:'',
                 type:'admin',
+                reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
                 
             },
             options: [
@@ -80,11 +83,16 @@ export default {
         ...mapActions('store',['registerUser','loginUser']),
         submitForm(){
             if(this.tab=='login'){
+                
                 this.loginUser(this.formData)
             }
             else{
                 this.registerUser(this.formData)
             }
+        },
+        isValidEmail (val) {
+            const emailPattern = /^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/;
+            return emailPattern.test(val) || 'Invalid email';
         }
     }
 }

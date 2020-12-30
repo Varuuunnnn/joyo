@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md" >
-    
+      
       <div class="text-h2 text-center">
          {{ userDetails.name }}
          <q-badge>{{ userDetails.type }}</q-badge>

@@ -1,54 +1,11 @@
 <template>
   <div class="q-pa-md">
-    <div class="text-h2 text-center">
+    
+    <div class="text-h2 text-center" style="padding-bottom:20px;">
       {{ userDetails.name }}
       <q-badge>{{ userDetails.type }}</q-badge>
     </div>
-    <div class="q-mt-md">
-      <q-fab
-        v-model="fab2"
-        label="What to do"
-        external-label
-        label-class="bg-grey-3 text-purple"
-        vertical-actions-align="left"
-        color="primary"
-        icon="menu"
-        direction="down"
-      >
-        <q-fab-action
-          label-class="bg-grey-3 text-grey-8"
-          external-label
-          color="primary"
-          @click="onClick"
-          icon="add_task"
-          label="Add project"
-        />
-        <q-fab-action
-          label-class="bg-grey-3 text-grey-8"
-          external-label
-          color="secondary"
-          @click="onClick"
-          icon="list"
-          label="Projects list"
-        />
-        <q-fab-action
-          label-class="bg-grey-3 text-grey-8"
-          external-label
-          color="red"
-          @click="onClick"
-          icon="warning"
-          label="Create issues"
-        />
-        <q-fab-action
-          label-class="bg-grey-3 text-grey-8"
-          external-label
-          color="accent"
-          @click="onClick"
-          icon="comment"
-          label="Add comments"
-        />
-      </q-fab>
-    </div>
+    
 
     <q-card class="full-width">
       <q-tabs
@@ -112,7 +69,7 @@ export default {
   data() {
     return {
       tab: "project-list",
-      fab2: true,
+      
     };
   },
   components: {
@@ -120,11 +77,14 @@ export default {
     "project-list": require("components/ShowProjectsList.vue").default,
     "create-issue": require("components/CreateIssue.vue").default,
     "add-comment": require("components/AddComment.vue").default
+  },
+  methods:{
+    
   }
 };
 </script>
-    AddComment
-<style lang="stylus" scoped>
+    
+<style  scoped>
 .full-width {
   width: 60% !important;
   margin-left: auto !important; /* rtl:ignore */
@@ -132,4 +92,6 @@ export default {
   margin-top: auto !important; /* rtl:ignore */
   margin-bottom: auto !important; /* rtl:ignore */
 }
+
+
 </style>

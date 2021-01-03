@@ -47,6 +47,11 @@
               <q-input type="text" v-model.number="props.row.billable" dense autofocus />
             </q-popup-edit>
           </q-td>
+          <q-btn
+           flat
+           icon="delete" 
+           color="primary"
+          />
         </q-tr>
       </template>
     </q-table>
@@ -102,3 +107,12 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+.q-btn {
+    padding: 19px 16px;
+    min-height: 2.572em;
+    border-radius: inherit;
+    width: 50%;
+    height: 50%;
+}
+</style>

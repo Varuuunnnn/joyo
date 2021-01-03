@@ -17,7 +17,7 @@
     
     <div style="width: 130px; margin: 0 auto">
       <q-space />
-      <q-btn color="primary" label="Create issue" type="submit" />
+      <q-btn color="primary" label="Comment" type="submit" />
     </div>
   </q-form>
 </template>

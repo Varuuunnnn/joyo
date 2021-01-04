@@ -30,10 +30,15 @@
           name="create-issue"
           label="Create issue" 
         />
+         <q-tab 
+          name="issues-list"
+          label="Issues" 
+        />
         <q-tab 
           name="add-comment"
           label="Add comment" 
         />
+       
       </q-tabs>
 
       <q-separator />
@@ -50,16 +55,23 @@
         <q-tab-panel name="create-issue" v-if="userDetails.type == 'admin'||userDetails.type == 'projectManager'||userDetails.type == 'projectLead'">
           <create-issue :tab="tab" />
         </q-tab-panel>
+         
+        <q-tab-panel name="issues-list" >
+          <issues-list :tab="tab" />
+        </q-tab-panel>
 
         <q-tab-panel name="add-comment" >
           <add-comment :tab="tab" />
         </q-tab-panel>
+
+        
       </q-tab-panels>
     </q-card>
   </div>
 </template>
 
 <script>
+import IssuesList from 'src/components/IssuesList.vue';
 
 import { mapState } from "vuex";
 export default {
@@ -75,10 +87,12 @@ export default {
     "add-project": require("components/AddProjects.vue").default,
     "project-list": require("components/ShowProjectsList.vue").default,
     "create-issue": require("components/CreateIssue.vue").default,
-    "add-comment": require("components/AddComment.vue").default
+    "add-comment": require("components/AddComment.vue").default,
+    "issues-list": require("components/IssuesList.vue").default,
   },
   methods:{
-    
+
+    IssuesList    
   }
 };
 </script>

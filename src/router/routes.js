@@ -1,4 +1,6 @@
 
+import store from 'src/store/store'
+
 const routes = [
   {
     path: '/',
@@ -6,7 +8,14 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Home.vue') },
-      { path: '/dashboard', component: () => import('pages/DashBoard.vue') }
+      { path: '/dashboard', component: () => import('pages/DashBoard.vue'),
+        beforeEnter:(to,from,next)=>{
+         if(store.state.userDetails=={})
+          next('')
+         else
+          next()
+        }
+      }
     ]
   },
 

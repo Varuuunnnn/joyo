@@ -3,7 +3,6 @@
    <q-table
       :data="data"
       :columns="columns"
-      title="List Of Projects"
       :rows-per-page-options="[]"
       row-key="name"
       wrap-cells
@@ -48,6 +47,7 @@
             </q-popup-edit>
           </q-td>
           <q-btn
+           v-if="userDetails.type=='admin'"
            flat
            icon="delete" 
            color="primary"

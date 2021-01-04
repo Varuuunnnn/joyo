@@ -50,6 +50,14 @@
           icon="comment"
           label="Add comments"
         />
+        <q-fab-action
+          label-class="bg-white text-black"
+          external-label
+          color="accent"
+          @click="onClick"
+          icon="comment"
+          label="Show issues"
+        />
       </q-fab>
     </div>
         

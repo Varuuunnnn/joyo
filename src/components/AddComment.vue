@@ -3,8 +3,8 @@
     <q-input
       outlined
       class="q-mb-md"
-      v-model="issueData.issue"
-      label="Issue title"
+      v-model="issueData.issueId"
+      label="Issue id"
       type="text"
     />
     <q-input
@@ -32,7 +32,7 @@ export default {
         return{
             issueComments:[],
             issueData:{
-                issue:'',
+                issueId:'',
                 comment:'',
                // name:userDetails.name
             }
